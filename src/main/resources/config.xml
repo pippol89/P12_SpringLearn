@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="firstBeanCar" class="com.company.beans.Car">
+        <property name="Speed" value="190" />
+        <property name="Mark" value="Volkswagen" />
+    </bean>
+
+    <bean id="secondBeanCar" class="com.company.beans.Car">
+        <constructor-arg name="speed" value="210"/>
+        <constructor-arg name="mark" value="Mercedes"/>
+        <property name="countries">
+            <list>
+                <value>Russia</value>
+                <value>German</value>
+            </list>
+        </property>
+        <property name="speed" value="250"/>
+    </bean>
+</beans>
